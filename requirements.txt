@@ -3,3 +3,4 @@ scikit-learn==1.1.2
 kmodes==0.12.2
 streamlit >= 1.9.2
 boruta==0.3
+apyori==1.1.2
