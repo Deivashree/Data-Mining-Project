@@ -10,8 +10,6 @@ from boruta import BorutaPy
 st.set_page_config(layout='wide')
 c1, padding, c2 = st.columns((10,2,10))
 
-c1.write(BorutaPy.__version)
-
 c1.title('Association Rule Mining')
 c1.markdown('Association Rule Mining Problem: Is there any correlation between customer’s age, customer with spectacles, gender of the customer and customer’s attire with the washer number?')
 c1.markdown('#')
