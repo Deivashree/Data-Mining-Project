@@ -73,9 +73,9 @@ timespent_val = c2.selectbox("Time Spent: ", sorted(df['TimeSpent_minutes'].uniq
 time_val = c2.selectbox("Time (Hour): ", sorted(df['Time1'].unique()))
 
 if c2.button('Predict'):
-    #new_row = {'Age':age_val, 'Spectacles':spec_val, 'Attire':attire_val, 'Kids_Category':kidscat_val, 'latitude':lat_val, 'longitude':lon_val, 'Pants_Colour':pantscol_val, 'Basket_colour':basketcol_val, 'Shirt_Colour':shirtcol_val, 'Time1':time_val, 'TimeSpent_minutes':timespent_val}
+    new_row = {'Age':age_val, 'Spectacles':spec_val, 'Attire':attire_val, 'Kids_Category':kidscat_val, 'latitude':lat_val, 'longitude':lon_val, 'Pants_Colour':pantscol_val, 'Basket_colour':basketcol_val, 'Shirt_Colour':shirtcol_val, 'Time1':time_val, 'TimeSpent_minutes':timespent_val}
     #append row to the dataframe
-    #df = df.append(new_row, ignore_index=True)
+    df = df.append(new_row, ignore_index=True)
 
     le = preprocessing.LabelEncoder()
     df_object = df.select_dtypes(include=['object'])
@@ -93,7 +93,7 @@ if c2.button('Predict'):
     # set n_jobs=-1
     # n_estimators="auto"
 
-    #df_encoded,last_row=df_encoded.drop(df_encoded.tail(1).index),df_encoded.tail(1)
+    df_encoded,last_row=df_encoded.drop(df_encoded.tail(1).index),df_encoded.tail(1)
     # pred_row = last_row.dropna(axis=1)
 
     X = df_encoded.drop(["Basket_Size","Date"],axis=1)
