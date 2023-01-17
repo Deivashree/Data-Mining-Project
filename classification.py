@@ -93,7 +93,7 @@ if c2.button('Predict'):
     # set n_jobs=-1
     # n_estimators="auto"
 
-    df_encoded,last_row=df_encoded.drop(df_encoded.tail(1).index),df_encoded.tail(1)
+    #df_encoded,last_row=df_encoded.drop(df_encoded.tail(1).index),df_encoded.tail(1)
     # pred_row = last_row.dropna(axis=1)
 
     X = df_encoded.drop(["Basket_Size","Date"],axis=1)
